@@ -2,7 +2,7 @@ const clients = [
   {
     index: "01",
     name: "DecodeDev",
-    type: "React Native mobile",
+    type: "Mobile app",
     description: "Mobile experiences built to feel fast, fluid and familiar on every device.",
     accent: "orange",
   },
@@ -23,28 +23,28 @@ const clients = [
   {
     index: "04",
     name: "JujLiving",
-    type: "React Native mobile",
+    type: "Mobile app",
     description: "A thoughtful mobile product shaped around simple, everyday interactions.",
     accent: "cream",
   },
   {
     index: "05",
     name: "AUX Studios",
-    type: "React Native mobile",
+    type: "Mobile app",
     description: "High-quality mobile delivery for ambitious digital product teams.",
     accent: "coral",
   },
   {
     index: "06",
     name: "StoneThree",
-    type: "Django · FastAPI",
+    type: "Web app",
     description: "Robust backend systems designed for performance, clarity and scale.",
     accent: "violet",
   },
 ];
 
 const services = [
-  ["01", "Mobile products", "React Native apps that are polished, maintainable and ready to grow."],
+  ["01", "Mobile products", "Mobile apps that are polished, maintainable and ready to grow."],
   ["02", "Web platforms", "Modern web applications and APIs built for real operational demands."],
   ["03", "Commerce", "Custom e-commerce plugins and integrations that make transactions simpler."],
   ["04", "Technical delivery", "Senior engineering partnership from the first decision to production."],
@@ -60,10 +60,11 @@ function Arrow({ diagonal = false }: { diagonal?: boolean }) {
 
 function Mark() {
   return (
-    <span className="brand-mark" aria-hidden="true">
-      <span />
-      <i />
-    </span>
+    <svg className="brand-mark" aria-hidden="true" viewBox="0 0 76 100">
+      <path className="mark-letter" d="M0 0h15v15H0V0Zm0 50h15v50H0V50ZM20 0h22c18 0 30 11 30 25 0 10-5 18-14 22 11 4 18 13 18 25 0 17-13 28-33 28H20V50h21c10 0 17-6 17-14s-7-13-17-13H20V0Zm0 62v25h22c11 0 18-5 18-13 0-7-7-12-18-12H20Z" />
+      <circle className="mark-letter" cx="7.5" cy="32.5" r="7.5" />
+      <circle className="mark-dot" cx="41" cy="74" r="9" />
+    </svg>
   );
 }
 
@@ -86,7 +87,6 @@ export default function Home() {
       </nav>
 
       <section className="hero shell" id="top">
-        <div className="eyebrow"><span /> Cape Town · South Africa</div>
         <h1>We are<br /><em>Bitwise.</em></h1>
         <div className="hero-bottom">
           <div className="orbit" aria-hidden="true">
@@ -103,7 +103,10 @@ export default function Home() {
       </section>
 
       <section className="marquee" aria-label="Our capabilities">
-        <div>Mobile <b>•</b> Web <b>•</b> Fintech <b>•</b> E-commerce <b>•</b> APIs <b>•</b> Mobile <b>•</b> Web <b>•</b> Fintech</div>
+        <div className="marquee-track">
+          <span>Mobile <b>•</b> Web <b>•</b> Fintech <b>•</b> E-commerce <b>•</b> APIs <b>•</b></span>
+          <span aria-hidden="true">Mobile <b>•</b> Web <b>•</b> Fintech <b>•</b> E-commerce <b>•</b> APIs <b>•</b></span>
+        </div>
       </section>
 
       <section className="work light-section" id="work">
@@ -158,7 +161,7 @@ export default function Home() {
           <div className="about-copy">
             <div><span className="section-number">03</span><span className="kicker">How we work</span></div>
             <h2>Small team.<br /><em>Serious output.</em></h2>
-            <p>Based in Century City, Cape Town, we bring senior thinking, honest communication and disciplined execution to every engagement.</p>
+            <p>We bring senior thinking, honest communication and disciplined execution to every engagement.</p>
             <div className="principles">
               <span>Clear thinking</span><span>Precise execution</span><span>Long-term partnership</span>
             </div>
@@ -170,8 +173,7 @@ export default function Home() {
         <div className="eyebrow"><span /> Have a project in mind?</div>
         <h2>Let’s make<br /><em>it happen.</em></h2>
         <div className="contact-row">
-          <a href="mailto:hello@bitwisesoftware.co.za">hello@bitwisesoftware.co.za <Arrow diagonal /></a>
-          <p>Century City<br />Cape Town, South Africa</p>
+          <a href="mailto:hello@bitwisesoftware.co.za">Get in touch <Arrow diagonal /></a>
         </div>
       </section>
 

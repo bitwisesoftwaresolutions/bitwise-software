@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Bitwise Software Solutions | Software that delivers",
+  title: "Bitwise Software Solutions",
   description:
-    "Cape Town software specialists delivering dependable mobile, web, fintech and e-commerce products.",
+    "Software solutions, precisely delivered.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
